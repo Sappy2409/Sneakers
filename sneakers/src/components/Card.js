@@ -1,4 +1,4 @@
-export function Card() {
+export function Card(props) {
     return (
         <div className="card">
             <button id="like">
@@ -9,12 +9,12 @@ export function Card() {
                         fill="#FF8585"/>
                 </svg>
             </button>
-            <img width="133" height="112" src="/img/2.png" alt="Sneakers"/>
-            <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
+            <img width="133" height="112" src={props.imageUrl} alt="Sneakers"/>
+            <p>{props.name}</p>
             <div className="cardBottom">
                 <div id="priceText">
                     <span>Цена:</span>
-                    <b>12 999 руб.</b>
+                    <b>{props.price} руб.</b>
                 </div>
                 <button id="plus">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"

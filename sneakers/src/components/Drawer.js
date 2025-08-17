@@ -2,7 +2,7 @@ import {CartItem} from "./CartItem";
 
 export function Drawer() {
     return (
-        <div className="overlay">
+        <div className="overlay" style={{display: "none"}}>
             <div className="drawer">
                 <h2>Корзина</h2>
                 <div className="items">
