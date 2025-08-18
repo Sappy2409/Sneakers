@@ -1,15 +1,16 @@
-import {CartItem} from "./CartItem";
+import {CartItem} from "../CartItem/CartItem";
+import styles from './Drawer.module.scss';
 
-export function Drawer() {
+export function Drawer(props) {
     return (
-        <div className="overlay" style={{display: "none"}}>
-            <div className="drawer">
+        <div className={styles.overlay} onClick={props.onClickOverlay}>
+            <div className={styles.drawer}>
                 <h2>Корзина</h2>
-                <div className="items">
+                <div className={styles.items}>
                     <CartItem/>
                     <CartItem/>
                 </div>
-                <div className="cartTotalBlock">
+                <div className={styles.cartTotalBlock}>
                     <ul>
                         <li>
                             <span>Итого:</span>

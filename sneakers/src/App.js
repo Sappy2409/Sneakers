@@ -1,8 +1,9 @@
-import { Card } from './components/Card';
+import React from "react";
 
-import { Header } from './components/Header';
-import { Drawer } from "./components/Drawer";
-import './App.css';
+import { Card } from './components/Card/Card';
+import { Header } from './components/Header/Header';
+import { Drawer } from "./components/Drawer/Drawer";
+
 
 const arr = [
     {
@@ -19,14 +20,21 @@ const arr = [
         name: 'Кроссовки Puma X Aka Boku Future Rider',
         price: '8 999',
         imageUrl: '/img/3.png'
+    },
+    {
+        name: 'Мужские Кроссовки Under Armour Curry 8',
+        price: '15 199',
+        imageUrl: '/img/4.png'
     }
 ];
 
 export function App() {
+    const [cartOpened, setCartOpened] = React.useState(false);
+
   return (
     <div className="wrapper">
-            <Drawer />
-            <Header />
+        {cartOpened ? <Drawer onClickOverlay={() => setCartOpened(false)} /> : null}
+            <Header onClickCart = {() => setCartOpened(true)}  />
         <div className="content">
             <div className="titleSearchBar">
                 <h1>Все кроссовки</h1>
@@ -41,7 +49,13 @@ export function App() {
             </div>
             <div className="cardList">
                 {arr.map((obj) =>
-                    <Card name={obj.name} price={obj.price} imageUrl={obj.imageUrl} />
+                    <Card
+                        name={obj.name}
+                        price={obj.price}
+                        imageUrl={obj.imageUrl}
+                        onLike={() => console.log('Добавили в избранное')}
+                        onPlus={() => console.log('Добавили в корзину')}
+                    />
                 )}
             </div>
         </div>

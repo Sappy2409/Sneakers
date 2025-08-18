@@ -1,0 +1,78 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 385px;
+  height: 100%;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 0 30px;
+  cursor: auto;
+
+  .items {
+    overflow: auto;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+
+  .items {
+    flex: 1;
+  }
+
+  .cartTotalBlock {
+
+    ul {
+      margin: 0 20px 0 -20px;
+    }
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #DFDFDF;
+      margin: 0 10px;
+    }
+
+    button {
+      width: 93%;
+      margin-left: 15px;
+      margin-bottom: 20px;
+      height: 55px;
+      border: 0;
+      color: #fff;
+      background: #9DD558;
+      border-radius: 18px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: lighten(#9DD558, 10%);
+      }
+
+      &:active {
+        background: darken(#9DD558, 10%);
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid #F3F3F3;
+  padding: 20px;
+  width: 210px;
+  height: 260px;
+  border-radius: 40px;
+  margin: 20px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+
+  &:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+  }
+
+  img {
+    display: flex;
+    justify-self: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+
+  .priceText {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding-left: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.like {
+  display: flex;
+  justify-items: start;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

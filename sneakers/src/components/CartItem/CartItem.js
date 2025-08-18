@@ -1,6 +1,8 @@
+import styles from './CartItem.module.scss'
+
 export function CartItem() {
     return (
-        <div className="cartItem">
+        <div className={styles.cartItem}>
             <img width="70" height="70" src="/img/5.png" alt="sneaker"/>
             <div>
                 <p>Мужские Кроссовки Nike Air Max 270</p>
